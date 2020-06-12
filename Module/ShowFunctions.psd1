@@ -24,16 +24,16 @@ GUID = 'd0706107-af94-4bfb-834a-012bb28f511c'
 Author = 'Mike Garvey'
 
 # Company or vendor of this module
-CompanyName = 'DGR Systems, LLC.'
+CompanyName = 'Yevrag35, LLC.'
 
 # Copyright statement for this module
 Copyright = '(c) 2020 Mike Garvey. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'PowerShell module wrapper for displaying folder/file dialogs in scripts.'
 
 # Minimum version of the Windows PowerShell engine required by this module
-# PowerShellVersion = ''
+PowerShellVersion = '4.0'
 
 # Name of the Windows PowerShell host required by this module
 # PowerShellHostName = ''
@@ -69,7 +69,10 @@ Copyright = '(c) 2020 Mike Garvey. All rights reserved.'
 NestedModules = @('ShowFunctions.psm1', 'OokiiDialogFunctions.psm1')
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = '*'
+FunctionsToExport = @(
+    'Show-AdvancedFolderPicker', 'Show-AdvancedInputBox',
+    "Show-FilePicker", "Show-FolderPicker", "Show-FormsPopUp", "Show-VBInputBox", "Show-VBPopUp"
+)
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()
@@ -95,13 +98,14 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        # Tags = @()
+        Tags = @('File', 'Folder', 'Picker', 'Show', 'Dialog', 'ookii', 'advanced', 'select', 'choice',
+            'input', 'box', 'text', 'password', 'mask', 'prompt', 'visualbasic', 'forms')
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://raw.githubusercontent.com/Yevrag35/ShowFunctions/master/LICENSE.md'
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/Yevrag35/ShowFunctions'
 
         # A URL to an icon representing this module.
         # IconUri = ''
@@ -114,7 +118,7 @@ PrivateData = @{
 } # End of PrivateData hashtable
 
 # HelpInfo URI of this module
-# HelpInfoURI = ''
+HelpInfoURI = 'https://github.com/Yevrag35/ShowFunctions/issues'
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
