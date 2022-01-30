@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>MG.PowerShell.Show</RootNamespace>
+    <ImplicitUsings>false</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>MG.PowerShell.Show</AssemblyName>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.2.0" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\PSShowFunctions\**\*.cs" Exclude="..\PSShowFunctions\obj\**\*.cs;..\PSShowFunctions\bin\**\*.cs;..\PSShowFunctions\Properties\AssemblyInfo.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Debug.ps1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Debug.ps1">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+</Project>

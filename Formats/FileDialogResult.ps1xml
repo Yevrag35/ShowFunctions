@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<ViewDefinitions>
+		<View>
+			<Name>FileDialogResult ListView</Name>
+			<ViewSelectedBy>
+				<TypeName>MG.PowerShell.Show.Models.FileDialogResult</TypeName>
+			</ViewSelectedBy>
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<ListItems>
+							<ListItem>
+								<PropertyName>PressedOK</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>Response</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>FilesSelected</PropertyName>
+							</ListItem>
+							<ListItem>
+								<Label>FileName</Label>
+								<ScriptBlock>
+									Split-Path -Path $_.FileName -Leaf
+								</ScriptBlock>
+								<ItemSelectionCondition>
+									<ScriptBlock>
+										$_.FilesSelected -le 1
+									</ScriptBlock>
+								</ItemSelectionCondition>
+							</ListItem>
+							<ListItem>
+								<Label>FileNames</Label>
+								<ScriptBlock>
+									$_.FileNames | Foreach-Object { Split-Path -Path $_ -Leaf }
+								</ScriptBlock>
+								<ItemSelectionCondition>
+									<ScriptBlock>
+										$_.FilesSelected -ge 2
+									</ScriptBlock>
+								</ItemSelectionCondition>
+							</ListItem>
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</View>
+	</ViewDefinitions>
+</Configuration>

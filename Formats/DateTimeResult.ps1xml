@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<ViewDefinitions>
+		<View>
+			<Name>DateTimeResult ListView</Name>
+			<ViewSelectedBy>
+				<TypeName>MG.PowerShell.Show.Components.DateTimeResult</TypeName>
+			</ViewSelectedBy>
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<ListItems>
+							<ListItem>
+								<Label>Date</Label>
+								<ScriptBlock>
+									$_.GetDateString()
+								</ScriptBlock>
+							</ListItem>
+							<ListItem>
+								<Label>Time</Label>
+								<ScriptBlock>
+									$_.GetTimeString()
+								</ScriptBlock>
+							</ListItem>
+							<ListItem>
+								<PropertyName>StringValue</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>UtcValue</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>Value</PropertyName>
+							</ListItem>
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</View>
+	</ViewDefinitions>
+</Configuration>

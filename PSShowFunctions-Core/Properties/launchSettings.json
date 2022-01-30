@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "PowerShell7": {
+      "commandName": "Executable",
+      "executablePath": "pwsh.exe",
+      "commandLineArgs": "-Ex Bypass -NoExit -File \"Debug.ps1\""
+    }
+  }
+}
