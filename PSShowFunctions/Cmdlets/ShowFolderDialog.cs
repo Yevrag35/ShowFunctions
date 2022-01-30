@@ -52,8 +52,7 @@ namespace MG.PowerShell.Show.Cmdlets
                 Description = this.Description,
                 ShowNewFolderButton = _newFolder,
 #if NET5_0_OR_GREATER
-                //InitialDirectory = this.InitialDirectory,
-                RootFolder = SpecialFolder.Desktop
+                InitialDirectory = this.InitialDirectory
 #else
                 RootFolder = this.RootFolder
 #endif
