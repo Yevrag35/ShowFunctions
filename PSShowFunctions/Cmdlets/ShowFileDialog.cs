@@ -80,7 +80,6 @@ namespace MG.PowerShell.Show.Cmdlets
         {
             using (var openFileDialog = new OpenFileDialog
             {
-                AutoUpgradeEnabled = true,
                 Filter = this.CustomFileFilter,
                 InitialDirectory = this.InitialDirectory,
                 Multiselect = _multiSelect,
@@ -102,11 +101,11 @@ namespace MG.PowerShell.Show.Cmdlets
             {
                 string ext = extensions[i];
                 sb.Append(ext.ToUpper()).Append(" files ")
-                    .Append("(*.").Append(ext).Append(")")
+                    .Append("(*.").Append(ext).Append(char.Parse(")"))
                     .Append("|*.").Append(ext.ToLower());
 
                 if (i >= 0 && i < extensions.Length - 1)
-                    sb.Append("|");
+                    sb.Append(char.Parse("|"));
             }
 
             return sb.ToString();

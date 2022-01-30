@@ -4,7 +4,7 @@
 		<View>
 			<Name>Picker Result ListView</Name>
 			<ViewSelectedBy>
-				<TypeName>MG.PowerShell.Show.Components.PickerResult</TypeName>
+				<TypeName>MG.PowerShell.Show.Models.PickerResult</TypeName>
 			</ViewSelectedBy>
 			<ListControl>
 				<ListEntries>
