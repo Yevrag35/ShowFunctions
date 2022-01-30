@@ -56,8 +56,8 @@
     <Compile Include="Cmdlets\ShowFolderDialog.cs" />
     <Compile Include="Components\DateTimeResult.cs" />
     <Compile Include="Components\Enums.cs" />
-    <Compile Include="Components\IPickerResult.cs" />
-    <Compile Include="Components\PickerResult.cs" />
+    <Compile Include="Models\IPickerResult.cs" />
+    <Compile Include="Models\PickerResult.cs" />
     <Compile Include="Forms\DateTimeForm.cs">
       <SubType>Form</SubType>
     </Compile>

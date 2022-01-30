@@ -1,6 +1,7 @@
 ﻿using System;
+using MG.PowerShell.Show.Components;
 
-namespace MG.PowerShell.Show.Components
+namespace MG.PowerShell.Show.Models
 {
     public class PickerResult : IPickerResult
     {
